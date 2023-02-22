@@ -1,6 +1,5 @@
 package com.example.bsb_ked.controller;
 
-import com.example.bsb_ked.domain.entity.Batinfo;
 import com.example.bsb_ked.domain.entity.Status;
 import com.example.bsb_ked.domain.entity.Testm;
 import com.example.bsb_ked.dto.TestmDto;
@@ -29,16 +28,26 @@ public class Controller {
         this.batinfoService = batinfoService;
     }
 
-    @GetMapping("/info_bat")
+/*    @GetMapping("/info_bat")
     public String info_bat(Model model, @RequestParam(value = "batnum", defaultValue = "bt_danigo01") String batnum){
         List<Batinfo> batinfoList = batinfoService.getBatinfo(batnum);
         model.addAttribute("batList", batinfoList);
         List<String> batnums = batinfoService.getBatnum();
         model.addAttribute("batnums", batnums);
         return "info_bat";
+    }*/
+
+    @GetMapping("/ess")
+    public String ess(Model model){
+        return "ess";
     }
 
-    @GetMapping("/monitor")
+    @GetMapping("/storage")
+    public String storage(Model model){
+        return "storage";
+    }
+
+/*    @GetMapping("/monitor")
     public String monitor(Model model){
         Long test0 = statusService.getStatus(0);
         model.addAttribute("test0", test0);
@@ -60,25 +69,26 @@ public class Controller {
         model.addAttribute("status", status);
         model.addAttribute("count", count);
         return "monitor";
-    }
+    }*/
 
     @GetMapping("/")
-    public String index(Model model) {
+    public String main(Model model) {
+
+        return "ess";
+    }
+
+    @GetMapping("/transport")
+    public String transport(Model model) {
+        TestsDto testsDto = testsService.getTests();
+        model.addAttribute("tests", testsDto);
         TestmDto testmDto = testmService.getTestm();
         model.addAttribute("testm", testmDto);
         List<Testm> testmDtos = testmService.getTest();
         model.addAttribute("test", testmDtos);
-        return "index";
+        return "transport";
     }
 
-    @GetMapping("/main")
-    public String main(Model model) {
-//        TestmDto testmDto = testmService.getTestm();
-//        model.addAttribute("testm", testmDto);
-        return "redirect:/";
-    }
-
-    @GetMapping("/info")
+/*    @GetMapping("/info")
     public String info(Model model){
         TestsDto testsDto = testsService.getTests();
         model.addAttribute("tests", testsDto);
@@ -87,7 +97,7 @@ public class Controller {
         List<Testm> testmDtos = testmService.getTest();
         model.addAttribute("test", testmDtos);
         return "index_info";
-    }
+    }*/
 
     @RequestMapping(value = "/data_in")
     public String getdata(@RequestParam(name="key1") String val1, @RequestParam(name="key2") Integer val2){

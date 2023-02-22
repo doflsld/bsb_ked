@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>BSB 통합관제시스템</title>
+    <title>KED 안전관리플랫폼</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -45,14 +45,15 @@
     <!-- Sidebar Start -->
     <div class="sidebar pe-4 pb-3">
         <div class="">
-            <a href="/main" class="navbar-brand m-4">
-                <h5 class="text-primary">BSB 통합관제시스템</h5>
+            <a href="/" class="navbar-brand m-4">
+                <!--<h5 class="text-primary">BSB 통합관제시스템</h5>-->
+                <h5 class="text-primary"><img src="../asset/images/s-images/ked_w.png" style="width: 13rem;"></h5>
             </a>
 
             <div class="navbar-nav w-100">
-                <li id="m-loc"><a href="/main" class="nav-item nav-link active"><i class="bi bi-geo-alt-fill me-4"></i>Location</a></li>
-                <li id="m-moni"><a href="/monitor" class="nav-item nav-link"><i class="bi bi-display me-4"></i>Monitor</a></li>
-                <li id="m-info"><a href="/info_bat" class="nav-item nav-link"><i class="bi bi-file-bar-graph-fill me-4"></i>Information</a></li>
+                <li id="m-loc"><a href="/ess" class="nav-item nav-link active"><i class="bi bi-menu-button-wide me-4"></i>ESS</a></li>
+                <li id="m-moni"><a href="/storage" class="nav-item nav-link"><i class="bi bi-box me-4"></i>STORAGE</a></li>
+                <li id="m-info"><a href="/transport" class="nav-item nav-link"><i class="bi bi-truck me-4"></i>TRANSPORT</a></li>
             </div>
 <!--        <form>
                 <input type="hidden" th:name="${_csrf.parameterName}"th:value="${_csrf.token}">
