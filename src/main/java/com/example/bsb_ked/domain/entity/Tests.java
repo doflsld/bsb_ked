@@ -12,23 +12,23 @@ import java.sql.Date;
 @Setter
 @NoArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
-@Table(name="bat_data_parse")
+@Table(name="bat_data")
 public class Tests {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column
     private Long id;
 
-    @Column(name="b1_temp")
+    @Column(name="temp")
     private Float temp;
 
-    @Column(name="b1_humi")
+    @Column(name="humi")
     private Float humi;
 
-    @Column(name="b5_co")
+    @Column(name="co")
     private Float co;
 
-    @Column(name="b5_nh3")
+    @Column(name="nh3")
     private Float h2;
 
     @Column

@@ -18,7 +18,6 @@ public class TestmService {
     }
 
     @Transactional
-//    @Scheduled(cron = "5 * * * * *")
     public TestmDto getTestm(){
 
         Testm testm = testmRepository.findAllByOrderByIdDesc().get(0);

@@ -2,15 +2,11 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
-    <!--<META HTTP-EQUIV="refresh" CONTENT="60">-->
     <title>KED 안전관리플랫폼</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-
-    <!-- Favicon -->
-    <link href="../theme/img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,16 +65,11 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td>다니고</td>
-                            <td>DBPD3-X150/X180</td>
+                            <td>배터리1</td>
+                            <td>ABCDE-TEST</td>
                             <td>13.3kWh</td>
                             <td>72V</td>
                             <td>180Ah</td>
-                            <!--                            <td>테슬라</td>
-                                                        <td>2,150 * 1,480 * 350 / 459.2kg</td>
-                                                        <td>66.5kWh</td>
-                                                        <td>-</td>
-                                                        <td>-</td>-->
                         </tr>
                         </tbody>
                     </table>
@@ -91,17 +82,14 @@
                         <tbody>
                         <tr>
                             <th>온도</th>
-                            <!--                            <td><p id="temp" th:text="${tests.temp}"></p></td>-->
                             <td><p id="temp">[[${tests.temp}]] ℃</p></td>
                         </tr>
                         <tr>
                             <th>습도</th>
-                            <!--                            <td><p id="humi" th:text="${tests.humi}"></p></td>-->
                             <td><p id="humi">[[${tests.humi}]] ％</p></td>
                         </tr>
                         <tr>
                             <th>CO</th>
-                            <!--                            <td><p id="co" th:text="${tests.co}"></p></td>-->
                             <td><p id="co">[[${#numbers.formatDecimal(tests.co/20, 1, 2)}]]</p></td>
                         </tr>
                         <!--                        <tr>
@@ -136,7 +124,7 @@
                         <i id="safety-line" class="position-absolute fs-6 bi bi-question-circle">
                             <div>
                                 <img src="../asset/images/s-images/status_line.png" style="width: 80%;margin-left: 20%;">
-                                <table id="">
+                                <table>
                                     <tbody>
                                     <tr>
                                         <th >온도</th>
@@ -206,7 +194,6 @@
 <script th:inline="javascript">
 
     var lat = [[${testm.lat}]]; lng = [[${testm.lng}]];
-    /*var lat = [[${test[12].lat}]]; lng = [[${test[12].lng}]];*/
 
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         mapOption = {
