@@ -32,10 +32,10 @@ public class Controller {
         return "storage";
     }
 
-/*    @GetMapping("/")
+    @GetMapping("/")
     public String main(Model model) {
         return "ess";
-    }*/
+    }
 
     @GetMapping("/transport")
     public String transport(Model model) {

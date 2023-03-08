@@ -54,44 +54,30 @@
             <!-- Main Content -->
             <div id="content">
 
-                
-                <!-- End of Topbar -->
-
                 <!-- Begin Page Content -->
                 <div class="container-fluid mt-4">
                     <div class="row">
-
                         <div class="row m-0">
 
                             <!-- Basic Card Example -->
                             <h6 class="m-0 font-weight-bold text-dark mb-3">Zone 1 : Abnormal Battery Storage</h6>
                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-black-50">온습도</h6>
-                                </div>
+                                    <h6 class="m-3 font-weight-bold text-black-50">온습도</h6>
                                 <div class="card-body">
                                     <div class="row justify-content-center">
-                                        <div class="col-md-4">
-                                            <div class="row justify-content-center">
-                                                <!-- 첫 번째 열 내용 -->
-                                                이미지
+                                        <div class="col-md-3">
+                                            <div class="row text-center">
+                                                <i class="bi bi-thermometer-half fs-3"></i>
                                             </div>
-                                            
                                             <div class="row justify-content-center">좋음</div>
                                             <div class="row justify-content-center">15.86℃</div>
                                         </div>
-                                        <div class="col-md-4">
-                                            <div class="row justify-content-center">
-                                                <!-- 두 번째 열 내용 -->
-                                                이미지
+                                        <div class="col-md-3">
+                                            <div class="row text-center">
+                                                <i class="bi bi-droplet-half fs-3"></i>
                                             </div>
-                                            
                                             <div class="row justify-content-center">좋음</div>
                                             <div class="row justify-content-center">43.71%</div>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <!-- 세 번째 열 내용 -->
-                                            이미지
                                         </div>
                                     </div>
                                 </div>
@@ -99,21 +85,19 @@
 
                             <!-- Basic Card Example -->
                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
                                     <div class="row">
                                         <div class="col-md-6 text-left">
-                                          <h6 class="m-0 font-weight-bold text-black-50">화재감지</h6>
+                                          <h6 class="m-3 font-weight-bold text-black-50">화재감지</h6>
                                         </div>
                                         <div class="col-md-6 text-right">
-                                          <h6 class="m-0 font-weight-bold text-black-50">미감지 감지</h6>
+                                          <h6 class="m-3 font-weight-bold" style="color: mediumseagreen;">미감지 <span class="ms-2" style="color: red;"> 감지 </span></h6>
                                         </div>
-                                      </div>
                                 </div>
                                 <div class="card-body">
                                   <div class="row justify-content-center">
-                                    이미지  
+                                    <img src="../asset/images/s-images/fire_alarm.png" class="w-25">
                                   </div>
-                                  <div class="row justify-content-center">
+                                  <div class="row justify-content-center" style="color: mediumseagreen;">
                                     미감지
                                   </div>
                                 </div>
@@ -122,35 +106,32 @@
                              
                             <!-- Basic Card Example -->
                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-black-50">오프가스</h6>
-                                </div>
+                                    <h6 class="m-3 font-weight-bold text-black-50">오프가스</h6>
                                 <div class="card-body">
                                     <div class="row">
-                                      <div class="col-md-12">
-                                        <table class="table table-borderless">
-                                          <tbody>
-                                            <tr>
-                                                <td>CO</td>
-                                                <td align="center">Row 2, Column 2</td>
-                                            </tr>
-                                            <tr>
-                                                <td>CO2</td>
-                                                <td align="center">Row 2, Column 2</td>
-                                            </tr>
-                                            <tr>
-                                                <td>H2</td>
-                                                <td align="center">Row 3, Column 2</td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                      </div>
+                                              <div class="off_box ">
+                                                  <div class="CO">
+                                                      <p class="off_title">CO</p>
+                                                      <object data="../asset/images/svg/graph.svg" class="off_gage" id="zone1_co_graph"></object>
+                                                      <p class="off_value" id="zone1_co_value">-<span> ppm</span></p>
+                                                      <p class="off_text" id="zone1_co_text">좋음</p>
+                                                  </div>
+                                                  <div class="O2">
+                                                      <p class="off_title">CO2</p>
+                                                      <object data="../asset/images/svg/graph.svg" class="off_gage" id="zone1_co2_graph"></object>
+                                                      <p class="off_value" id="zone1_co2_value">-<span> ppm</span></p>
+                                                      <p class="off_text" id="zone1_co2_text">좋음</p>
+                                                  </div>
+                                                  <div class="H2">
+                                                      <p class="off_title">H2</p>
+                                                      <object data="../asset/images/svg/graph.svg" class="off_gage" id="zone1_h2_graph"></object>
+                                                      <p class="off_value" id="zone1_h2_value">-<span> ppm</span></p>
+                                                      <p class="off_text" id="zone1_h2_text">좋음</p>
+                                                  </div>
+                                              </div>
                                     </div>
                                 </div>
                             </div>
-                            
-
-                            
 
                         </div>
 
@@ -159,91 +140,79 @@
                             <!-- Basic Card Example -->
                             <h6 class="m-0 font-weight-bold text-dark mb-3">Zone 2 : Abnormal Battery Storage (L)</h6>
                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-black-50">온습도</h6>
-                                </div>
+                                <h6 class="m-3 font-weight-bold text-black-50">온습도</h6>
                                 <div class="card-body">
                                     <div class="row justify-content-center">
-                                        <div class="col-md-4">
-                                            <div class="row justify-content-center">
-                                                <!-- 첫 번째 열 내용 -->
-                                                이미지
+                                        <div class="col-md-3">
+                                            <div class="row text-center">
+                                                <i class="bi bi-thermometer-half fs-3"></i>
                                             </div>
-                                            
                                             <div class="row justify-content-center">좋음</div>
                                             <div class="row justify-content-center">15.86℃</div>
                                         </div>
-                                        <div class="col-md-4">
-                                            <div class="row justify-content-center">
-                                                <!-- 두 번째 열 내용 -->
-                                                이미지
+                                        <div class="col-md-3">
+                                            <div class="row text-center">
+                                                <i class="bi bi-droplet-half fs-3"></i>
                                             </div>
-                                            
                                             <div class="row justify-content-center">좋음</div>
                                             <div class="row justify-content-center">43.71%</div>
                                         </div>
-                                        <div class="col-md-2">
-                                            <!-- 세 번째 열 내용 -->
-                                            이미지
-                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Basic Card Example -->
                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <div class="row">
-                                        <div class="col-md-6 text-left">
-                                          <h6 class="m-0 font-weight-bold text-black-50">화재감지</h6>
-                                        </div>
-                                        <div class="col-md-6 text-right">
-                                          <h6 class="m-0 font-weight-bold text-black-50">미감지 감지</h6>
-                                        </div>
-                                      </div>
+                                <div class="row">
+                                    <div class="col-md-6 text-left">
+                                        <h6 class="m-3 font-weight-bold text-black-50">화재감지</h6>
+                                    </div>
+                                    <div class="col-md-6 text-right">
+                                        <h6 class="m-3 font-weight-bold" style="color: mediumseagreen;">미감지 <span class="ms-2" style="color: red;"> 감지 </span></h6>
+
+                                    </div>
                                 </div>
                                 <div class="card-body">
-                                  <div class="row justify-content-center">
-                                    이미지  
-                                  </div>
-                                  <div class="row justify-content-center">
-                                    미감지
-                                  </div>
-                                </div>
-                            </div>
-                              
-                             
-                            <!-- Basic Card Example -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-black-50">오프가스</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                      <div class="col-md-12">
-                                        <table class="table table-borderless">
-                                          <tbody>
-                                            <tr>
-                                                <td>CO</td>
-                                                <td align="center">Row 2, Column 2</td>
-                                            </tr>
-                                            <tr>
-                                                <td>CO2</td>
-                                                <td align="center">Row 2, Column 2</td>
-                                            </tr>
-                                            <tr>
-                                                <td>H2</td>
-                                                <td align="center">Row 3, Column 2</td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                      </div>
+                                    <div class="row justify-content-center">
+                                        <img src="../asset/images/s-images/fire_alarm.png" class="w-25">
+                                    </div>
+                                    <div class="row justify-content-center" style="color: mediumseagreen;">
+                                        미감지
                                     </div>
                                 </div>
                             </div>
-                            
 
-                            
+
+                            <!-- Basic Card Example -->
+                            <div class="card shadow mb-4">
+                                <h6 class="m-3 font-weight-bold text-black-50">오프가스</h6>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="">
+                                            <div class="off_box ">
+                                                <div class="CO">
+                                                    <p class="off_title">CO</p>
+                                                    <object data="../asset/images/svg/graph.svg" class="off_gage" id="zone2_co_graph"></object>
+                                                    <p class="off_value" id="zone2_co_value">-<span> ppm</span></p>
+                                                    <p class="off_text" id="zone2_co_text">좋음</p>
+                                                </div>
+                                                <div class="O2">
+                                                    <p class="off_title">CO2</p>
+                                                    <object data="../asset/images/svg/graph.svg" class="off_gage" id="zone2_co2_graph"></object>
+                                                    <p class="off_value" id="zone2_co2_value">-<span> ppm</span></p>
+                                                    <p class="off_text" id="zone2_co2_text">좋음</p>
+                                                </div>
+                                                <div class="H2">
+                                                    <p class="off_title">H2</p>
+                                                    <object data="../asset/images/svg/graph.svg" class="off_gage" id="zone2_h2_graph"></object>
+                                                    <p class="off_value" id="zone2_h2_value">-<span> ppm</span></p>
+                                                    <p class="off_text" id="zone2_h2_text">좋음</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
 
@@ -252,91 +221,79 @@
                             <!-- Basic Card Example -->
                             <h6 class="m-0 font-weight-bold text-dark mb-3">Zone 3 : Abnormal Battery Storage (R)</h6>
                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-black-50">온습도</h6>
-                                </div>
+                                <h6 class="m-3 font-weight-bold text-black-50">온습도</h6>
                                 <div class="card-body">
                                     <div class="row justify-content-center">
-                                        <div class="col-md-4">
-                                            <div class="row justify-content-center">
-                                                <!-- 첫 번째 열 내용 -->
-                                                이미지
+                                        <div class="col-md-3">
+                                            <div class="row text-center">
+                                                <i class="bi bi-thermometer-half fs-3"></i>
                                             </div>
-                                            
                                             <div class="row justify-content-center">좋음</div>
                                             <div class="row justify-content-center">15.86℃</div>
                                         </div>
-                                        <div class="col-md-4">
-                                            <div class="row justify-content-center">
-                                                <!-- 두 번째 열 내용 -->
-                                                이미지
+                                        <div class="col-md-3">
+                                            <div class="row text-center">
+                                                <i class="bi bi-droplet-half fs-3"></i>
                                             </div>
-                                            
                                             <div class="row justify-content-center">좋음</div>
                                             <div class="row justify-content-center">43.71%</div>
                                         </div>
-                                        <div class="col-md-2">
-                                            <!-- 세 번째 열 내용 -->
-                                            이미지
-                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Basic Card Example -->
                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <div class="row">
-                                        <div class="col-md-6 text-left">
-                                          <h6 class="m-0 font-weight-bold text-black-50">화재감지</h6>
-                                        </div>
-                                        <div class="col-md-6 text-right">
-                                          <h6 class="m-0 font-weight-bold text-black-50">미감지 감지</h6>
-                                        </div>
-                                      </div>
+                                <div class="row">
+                                    <div class="col-md-6 text-left">
+                                        <h6 class="m-3 font-weight-bold text-black-50">화재감지</h6>
+                                    </div>
+                                    <div class="col-md-6 text-right">
+                                        <h6 class="m-3 font-weight-bold" style="color: mediumseagreen;">미감지 <span class="ms-2" style="color: red;"> 감지 </span></h6>
+
+                                    </div>
                                 </div>
                                 <div class="card-body">
-                                  <div class="row justify-content-center">
-                                    이미지  
-                                  </div>
-                                  <div class="row justify-content-center">
-                                    미감지
-                                  </div>
-                                </div>
-                            </div>
-                              
-                             
-                            <!-- Basic Card Example -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-black-50">오프가스</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                      <div class="col-md-12">
-                                        <table class="table table-borderless">
-                                          <tbody>
-                                            <tr>
-                                                <td>CO</td>
-                                                <td align="center">Row 2, Column 2</td>
-                                            </tr>
-                                            <tr>
-                                                <td>CO2</td>
-                                                <td align="center">Row 2, Column 2</td>
-                                            </tr>
-                                            <tr>
-                                                <td>H2</td>
-                                                <td align="center">Row 3, Column 2</td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                      </div>
+                                    <div class="row justify-content-center">
+                                        <img src="../asset/images/s-images/fire_alarm.png" class="w-25">
+                                    </div>
+                                    <div class="row justify-content-center" style="color: mediumseagreen;">
+                                        미감지
                                     </div>
                                 </div>
                             </div>
-                            
 
-                            
+
+                            <!-- Basic Card Example -->
+                            <div class="card shadow mb-4">
+                                <h6 class="m-3 font-weight-bold text-black-50">오프가스</h6>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="">
+                                            <div class="off_box">
+                                                <div class="CO">
+                                                    <p class="off_title">CO</p>
+                                                    <object data="../asset/images/svg/graph.svg" class="off_gage" id="zone3_co_graph"></object>
+                                                    <p class="off_value" id="zone3_co_value">-<span> ppm</span></p>
+                                                    <p class="off_text" id="zone3_co_text">좋음</p>
+                                                </div>
+                                                <div class="O2">
+                                                    <p class="off_title">CO2</p>
+                                                    <object data="../asset/images/svg/graph.svg" class="off_gage" id="zone3_co2_graph"></object>
+                                                    <p class="off_value" id="zone3_co2_value">-<span> ppm</span></p>
+                                                    <p class="off_text" id="zone3_co2_text">좋음</p>
+                                                </div>
+                                                <div class="H2">
+                                                    <p class="off_title">H2</p>
+                                                    <object data="../asset/images/svg/graph.svg" class="off_gage" id="zone3_h2_graph"></object>
+                                                    <p class="off_value" id="zone3_h2_value">-<span> ppm</span></p>
+                                                    <p class="off_text" id="zone3_h2_text">좋음</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
 
@@ -347,14 +304,9 @@
 
             </div>
             <!-- End of Main Content -->
-            
-        
-            <!-- Scroll to Top Button-->
-            <a class="scroll-to-top rounded" href="#page-top">
-                <i class="fas fa-angle-up"></i>
-            </a>
+
+            <!-- Footer -->
             <!--
-         Footer
         <footer class="sticky-footer bg-white">
             <div class="container">
                 <div class="copyright">

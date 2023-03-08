@@ -56,14 +56,132 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid mt-4">
-
+                <div class="container mt-4 px-5">
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="card">
+                                <h6 class="m-3 font-weight-bold text-black-50">내부 환경 정보</h6>
+                                <div class="card-body">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-3">
+                                            <div class="row text-center">
+                                                <i class="bi bi-thermometer-half fs-3"></i>
+                                            </div>
+                                            <div class="row justify-content-center">좋음</div>
+                                            <div class="row justify-content-center">15.86℃</div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="row text-center">
+                                                <i class="bi bi-droplet-half fs-3"></i>
+                                            </div>
+                                            <div class="row justify-content-center">좋음</div>
+                                            <div class="row justify-content-center">43.71%</div>
+                                        </div>
+                                        <div>
+                                            <table class="table text-center mt-3">
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col"></th>
+                                                    <th scope="col">온도</th>
+                                                    <th scope="col">습도</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="row"><div class="rounded" style="width: 20px; height: 20px; background-color: red;"></div></th>
+                                                    <td>60℃ 이상</td>
+                                                    <td>60％ 이상</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><div class="rounded" style="width: 20px; height: 20px; background-color: darkorange;"></div></th>
+                                                    <td>48℃이상 60℃ 미만</td>
+                                                    <td>48％이상 60％ 미만</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><div class="rounded" style="width: 20px; height: 20px; background-color: mediumseagreen;"></div></th>
+                                                    <td>48℃ 미만</td>
+                                                    <td>48％ 미만</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
                         </div>
-
+                        <div class="col-7 ps-5">
+                            <div class="card">
+                                    <h6 class="m-3 font-weight-bold text-black-50">ESS SAFETY STATUS</h6>
+                                <div class="card-body text-center">
+                                    <img src="../asset/images/s-images/sms.png" style="width: 356px;" class="mb-3">
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="row mt-3">
+                        <div class="col-5">
+                            <div class="card">
+                                    <h6 class="m-3 font-weight-bold text-black-50">유해가스</h6>
+                                <div class="card-body">
+                                    <table class="table text-center fs-6 mt-2 mb-3">
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">VOC</th>
+                                            <td><p>43.0</p></td>
+                                            <td><p>ppm</p></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">NH3</th>
+                                            <td><p>2.35</p></td>
+                                            <td><p>ppm</p></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">CO2</th>
+                                            <td><p>13.0</p></td>
+                                            <td><p>ppm</p></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">CO</th>
+                                            <td><p>125.72</p></td>
+                                            <td><p>ppm</p></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-7 ps-5">
+                            <div class="card">
+                                    <h6 class="m-3 font-weight-bold text-black-50">BATTERY STATUS</h6>
+                                <div class="card-body">
+                                    <div class="card-body">
+                                        <table class="table text-center fs-6 align-middle">
+                                            <tbody>
+                                            <tr>
+                                                <th scope="row"><img style="width: 40px;" src="../asset/images/s-images/volt_icon.png"><p>전압</p></th>
+                                                <td><span>43.33 (V)</span></td>
+                                                <th scope="row"><img style="width: 40px;" src="../asset/images/s-images/ampere_icon.png"><p>전류</p></th>
+                                                <td><p>2.35</p></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><img style="width: 40px;" src="../asset/images/s-images/charge_icon.png"><p>충전량</p></th>
+                                                <td><p>13.0</p></td>
+                                                <th scope="row"><img style="width: 40px;" src="../asset/images/s-images/discharge_icon.png"><p>방전량</p></th>
+                                                <td><p>13.0</p></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                </div>
+
+                </div>
                 </div>
                 <!-- /.container-fluid -->
             </div>
@@ -101,73 +219,8 @@
 <script src="../js/include.js"></script>
 <!-- Clock -->
 <script src="../js/clock.js"></script>
+<script src="../js/scripts.js"></script>
 
-<script>
-
-    var daycycle = [];
-
-    for(var i = 0; i < 10; i++){
-        var date = new Date();
-        var a = new Date(date.setDate(date.getDate() - i));
-        var b = a.getMonth()+1 +'.'+a.getDate();
-
-        daycycle[i] = b;
-    }
-
-/*    let rate = [];
-    let status = [];
-    let count = [];
-
-    status = [[${status}]]; count = [[${count}]];
-
-    for(var j = 0; j < 10; j++){
-        rate[j] = Math.round(status[j]/count[j]*100, 2);
-        if(isNaN(rate[j])){
-            rate[j] = 0;
-        }
-    }*/
-
-    Highcharts.chart('chart_ess', {
-        colors : ['#1376E9'],
-        chart: {type: 'area'},
-        title: {text: ' '},
-        xAxis: {
-            categories: [daycycle[9], daycycle[8], daycycle[7], daycycle[6], daycycle[5], daycycle[4], daycycle[3], daycycle[2], daycycle[1], daycycle[0]]
-        },
-        yAxis: {
-            labels : {
-                formatter : function() {
-                    return this.value + ' %';
-                }
-            },
-            max: 100,
-            title: {text: ' '}
-        },
-        legend: {enabled: false},
-        // 하단 highchart.com 글씨 삭제
-        credits: {enabled: false},
-        // 상단 context menu 제거
-        exporting: {enabled: false},
-        tooltip: {valueSuffix:'%'},
-        plotOptions: {
-            series: {},
-            area: {
-                stacking: 'normal',
-                lineColor: '#FFFFFF',
-                lineWidth: 1,
-                marker: {
-                    lineWidth: 1,
-                    lineColor: '#FFFFFF'
-                }
-            }
-        },
-        series: [{
-            name: 'Percent',
-            // data: [rate[9], rate[8], rate[7], rate[6], rate[5], rate[4], rate[3], rate[2], rate[1], rate[0]]
-            data: [1,2,3,4,5,6,7,8,9,10]
-        }]
-    });
-</script>
 </body>
 
 </html>

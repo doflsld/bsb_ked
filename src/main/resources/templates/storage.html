@@ -48,27 +48,304 @@
     <div class="content">
         <div id="navbar"></div>
 
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid mt-4">
+                    <div class="row">
+                        <div class="row m-0">
+
+                            <!-- Basic Card Example -->
+                            <h6 class="m-0 font-weight-bold text-dark mb-3">Zone 1 : Abnormal Battery Storage</h6>
+                            <div class="card shadow mb-4">
+                                <h6 class="m-3 font-weight-bold text-black-50">온습도</h6>
+                                <div class="card-body">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-3">
+                                            <div class="row text-center">
+                                                <i class="bi bi-thermometer-half fs-3"></i>
+                                            </div>
+                                            <div class="row justify-content-center">좋음</div>
+                                            <div class="row justify-content-center">15.86℃</div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="row text-center">
+                                                <i class="bi bi-droplet-half fs-3"></i>
+                                            </div>
+                                            <div class="row justify-content-center">좋음</div>
+                                            <div class="row justify-content-center">43.71%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Basic Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="row">
+                                    <div class="col-md-6 text-left">
+                                        <h6 class="m-3 font-weight-bold text-black-50">화재감지</h6>
+                                    </div>
+                                    <div class="col-md-6 text-right">
+                                        <h6 class="m-3 font-weight-bold" style="color: mediumseagreen;">미감지 <span class="ms-2" style="color: red;"> 감지 </span></h6>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row justify-content-center">
+                                        <img src="../asset/images/s-images/fire_alarm.png" class="w-25">
+                                    </div>
+                                    <div class="row justify-content-center" style="color: mediumseagreen;">
+                                        미감지
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Basic Card Example -->
+                            <div class="card shadow mb-4">
+                                <h6 class="m-3 font-weight-bold text-black-50">오프가스</h6>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="off_box ">
+                                            <div class="CO">
+                                                <p class="off_title">CO</p>
+                                                <object data="../asset/images/svg/graph.svg" class="off_gage" id="zone1_co_graph"></object>
+                                                <p class="off_value" id="zone1_co_value">-<span> ppm</span></p>
+                                                <p class="off_text" id="zone1_co_text">좋음</p>
+                                            </div>
+                                            <div class="O2">
+                                                <p class="off_title">CO2</p>
+                                                <object data="../asset/images/svg/graph.svg" class="off_gage" id="zone1_co2_graph"></object>
+                                                <p class="off_value" id="zone1_co2_value">-<span> ppm</span></p>
+                                                <p class="off_text" id="zone1_co2_text">좋음</p>
+                                            </div>
+                                            <div class="H2">
+                                                <p class="off_title">H2</p>
+                                                <object data="../asset/images/svg/graph.svg" class="off_gage" id="zone1_h2_graph"></object>
+                                                <p class="off_value" id="zone1_h2_value">-<span> ppm</span></p>
+                                                <p class="off_text" id="zone1_h2_text">좋음</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row m-0">
+
+                            <!-- Basic Card Example -->
+                            <h6 class="m-0 font-weight-bold text-dark mb-3">Zone 2 : Abnormal Battery Storage (L)</h6>
+                            <div class="card shadow mb-4">
+                                <h6 class="m-3 font-weight-bold text-black-50">온습도</h6>
+                                <div class="card-body">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-3">
+                                            <div class="row text-center">
+                                                <i class="bi bi-thermometer-half fs-3"></i>
+                                            </div>
+                                            <div class="row justify-content-center">좋음</div>
+                                            <div class="row justify-content-center">15.86℃</div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="row text-center">
+                                                <i class="bi bi-droplet-half fs-3"></i>
+                                            </div>
+                                            <div class="row justify-content-center">좋음</div>
+                                            <div class="row justify-content-center">43.71%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Basic Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="row">
+                                    <div class="col-md-6 text-left">
+                                        <h6 class="m-3 font-weight-bold text-black-50">화재감지</h6>
+                                    </div>
+                                    <div class="col-md-6 text-right">
+                                        <h6 class="m-3 font-weight-bold" style="color: mediumseagreen;">미감지 <span class="ms-2" style="color: red;"> 감지 </span></h6>
+
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row justify-content-center">
+                                        <img src="../asset/images/s-images/fire_alarm.png" class="w-25">
+                                    </div>
+                                    <div class="row justify-content-center" style="color: mediumseagreen;">
+                                        미감지
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Basic Card Example -->
+                            <div class="card shadow mb-4">
+                                <h6 class="m-3 font-weight-bold text-black-50">오프가스</h6>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="">
+                                            <div class="off_box ">
+                                                <div class="CO">
+                                                    <p class="off_title">CO</p>
+                                                    <object data="../asset/images/svg/graph.svg" class="off_gage" id="zone2_co_graph"></object>
+                                                    <p class="off_value" id="zone2_co_value">-<span> ppm</span></p>
+                                                    <p class="off_text" id="zone2_co_text">좋음</p>
+                                                </div>
+                                                <div class="O2">
+                                                    <p class="off_title">CO2</p>
+                                                    <object data="../asset/images/svg/graph.svg" class="off_gage" id="zone2_co2_graph"></object>
+                                                    <p class="off_value" id="zone2_co2_value">-<span> ppm</span></p>
+                                                    <p class="off_text" id="zone2_co2_text">좋음</p>
+                                                </div>
+                                                <div class="H2">
+                                                    <p class="off_title">H2</p>
+                                                    <object data="../asset/images/svg/graph.svg" class="off_gage" id="zone2_h2_graph"></object>
+                                                    <p class="off_value" id="zone2_h2_value">-<span> ppm</span></p>
+                                                    <p class="off_text" id="zone2_h2_text">좋음</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row m-0">
+
+                            <!-- Basic Card Example -->
+                            <h6 class="m-0 font-weight-bold text-dark mb-3">Zone 3 : Abnormal Battery Storage (R)</h6>
+                            <div class="card shadow mb-4">
+                                <h6 class="m-3 font-weight-bold text-black-50">온습도</h6>
+                                <div class="card-body">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-3">
+                                            <div class="row text-center">
+                                                <i class="bi bi-thermometer-half fs-3"></i>
+                                            </div>
+                                            <div class="row justify-content-center">좋음</div>
+                                            <div class="row justify-content-center">15.86℃</div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="row text-center">
+                                                <i class="bi bi-droplet-half fs-3"></i>
+                                            </div>
+                                            <div class="row justify-content-center">좋음</div>
+                                            <div class="row justify-content-center">43.71%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Basic Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="row">
+                                    <div class="col-md-6 text-left">
+                                        <h6 class="m-3 font-weight-bold text-black-50">화재감지</h6>
+                                    </div>
+                                    <div class="col-md-6 text-right">
+                                        <h6 class="m-3 font-weight-bold" style="color: mediumseagreen;">미감지 <span class="ms-2" style="color: red;"> 감지 </span></h6>
+
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row justify-content-center">
+                                        <img src="../asset/images/s-images/fire_alarm.png" class="w-25">
+                                    </div>
+                                    <div class="row justify-content-center" style="color: mediumseagreen;">
+                                        미감지
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Basic Card Example -->
+                            <div class="card shadow mb-4">
+                                <h6 class="m-3 font-weight-bold text-black-50">오프가스</h6>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="">
+                                            <div class="off_box">
+                                                <div class="CO">
+                                                    <p class="off_title">CO</p>
+                                                    <object data="../asset/images/svg/graph.svg" class="off_gage" id="zone3_co_graph"></object>
+                                                    <p class="off_value" id="zone3_co_value">-<span> ppm</span></p>
+                                                    <p class="off_text" id="zone3_co_text">좋음</p>
+                                                </div>
+                                                <div class="O2">
+                                                    <p class="off_title">CO2</p>
+                                                    <object data="../asset/images/svg/graph.svg" class="off_gage" id="zone3_co2_graph"></object>
+                                                    <p class="off_value" id="zone3_co2_value">-<span> ppm</span></p>
+                                                    <p class="off_text" id="zone3_co2_text">좋음</p>
+                                                </div>
+                                                <div class="H2">
+                                                    <p class="off_title">H2</p>
+                                                    <object data="../asset/images/svg/graph.svg" class="off_gage" id="zone3_h2_graph"></object>
+                                                    <p class="off_value" id="zone3_h2_value">-<span> ppm</span></p>
+                                                    <p class="off_text" id="zone3_h2_text">좋음</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <!--
+        <footer class="sticky-footer bg-white">
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-left">
+                            <span>Copyright &copy; BA Energy. All Rights Reserved.</span>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <span>TEL : 1600 - 4276</span>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </footer>
+         End of Footer -->
+
+
+
+        </div>
+        <!-- Content End -->
+
+        <!-- Back to Top -->
+        <!--    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>-->
     </div>
-    <!-- Content End -->
 
-    <!-- Back to Top -->
-    <!--    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>-->
-</div>
-
-<!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../theme/lib/chart/chart.min.js"></script>
-<script src="../theme/lib/easing/easing.min.js"></script>
-<script src="../theme/lib/waypoints/waypoints.min.js"></script>
-<script src="../theme/lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="../theme/lib/tempusdominus/js/moment.min.js"></script>
-<script src="../theme/lib/tempusdominus/js/moment-timezone.min.js"></script>
-<script src="../theme/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- Include -->
-<script src="../js/include.js"></script>
-<!-- Clock -->
-<script src="../js/clock.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../theme/lib/chart/chart.min.js"></script>
+    <script src="../theme/lib/easing/easing.min.js"></script>
+    <script src="../theme/lib/waypoints/waypoints.min.js"></script>
+    <script src="../theme/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../theme/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../theme/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="../theme/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Include -->
+    <script src="../js/include.js"></script>
+    <!-- Clock -->
+    <script src="../js/clock.js"></script>
 </body>
 
 </html>
