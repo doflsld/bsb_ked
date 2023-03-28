@@ -265,10 +265,10 @@
 
 
 /*** Testimonial ***/
-.progress .progress-bar {
+/*.progress .progress-bar {
     width: 0px;
     transition: 2s;
-}
+}*/
 
 
 /*** Testimonial ***/
@@ -391,7 +391,7 @@
         top:-12px;
     }*/
 
-    #safety-line{
+    .safety-line{
         right: 7%;
         text-align: center;
         border-radius: 50%;
@@ -401,13 +401,13 @@
         line-height: 2rem;
         cursor: default;
     }
-    #safety-line:hover div{
+    .safety-line:hover div{
         display:block;
         transform-origin: 100% 0%;
         -webkit-animation: fadeIn 0.3s ease-in-out;
         animation: fadeIn 0.3s ease-in-out;
     }
-    #safety-line div{
+    .safety-line div{
         display: none;
         text-align: center;
         background-color: #FFFFFF;
@@ -422,7 +422,7 @@
         font-size: 13px;
         height: 13.5rem;
     }
-    #safety-line div:before{
+    .safety-line div:before{
         position: absolute;
         width:0;
         height: 0;
@@ -431,7 +431,7 @@
         right:7%;
         top:-12px;
     }
-    #safety-line div table{
+    .safety-line div table{
         border: #000 solid 1px !important;
         background-color: white;
         text-align: center;
@@ -439,17 +439,71 @@
         height: 140px !important;
         display: inline-table;
     }
-    #safety-line div table tr {
+    .safety-line div table tr {
         border: transparent 1px solid;
         font-size: small;
         font-style: normal;
     }
-    #safety-line div table tr td {
+
+    .safety-line div table tr td {
         /*        border: darkgray solid 1px;*/
     }
     /*    .chart{
             height: 174px;
         }*/
+
+
+    .safety-th{
+        right: 7%;
+        text-align: center;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
+        line-height: 2rem;
+        cursor: default;
+    }
+    .safety-th:hover div{
+        display:block;
+        transform-origin: 100% 0%;
+        -webkit-animation: fadeIn 0.3s ease-in-out;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+    .safety-th div{
+        display: none;
+        text-align: center;
+        background-color: #FFFFFF;
+        padding: 10px;
+        width: 350px;
+        position: absolute;
+        border: darkgray 1px solid;
+        border-radius: 3px;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+        right: -10px;
+        color: black;
+        font-size: 13px;
+        height: 10rem;
+    }
+    .safety-th div:before{
+        position: absolute;
+        width:0;
+        height: 0;
+        border:6px solid transparent;
+        border-bottom-color:#1E2021;
+        right:7%;
+    }
+    .safety-th div table{
+        border: #000 solid 1px !important;
+        background-color: white;
+        text-align: center;
+        width: 100%;
+        display: inline-table;
+    }
+    .safety-th div table tr {
+        border: transparent 1px solid;
+        font-size: small;
+        font-style: normal;
+    }
 }
 @media screen and (min-height: 900px){
     .status {
@@ -548,7 +602,7 @@
         top:-12px;
     }*/
 
-    #safety-line{
+    .safety-line{
         right: 7%;
         text-align: center;
         border-radius: 50%;
@@ -558,17 +612,17 @@
         line-height: 2rem;
         cursor: default;
     }
-    #safety-line:hover div{
+    .safety-line:hover div{
         display:block;
         transform-origin: 100% 0%;
         -webkit-animation: fadeIn 0.3s ease-in-out;
         animation: fadeIn 0.3s ease-in-out;
     }
-    #safety-line div{
+    .safety-line div{
         height: 14.5rem;
     }
 
-    #safety-line div table{
+    .safety-line div table{
         height: 160px !important;
     }
 
@@ -578,13 +632,34 @@
         }*/
 }
 
-.normal{border: 10px solid #2CB86D;}
+.progress-css {
+    appearance: none;
+}
+.progress-css::-webkit-progress-bar {
+    background:#f0f0f0;
+    border-radius : 1rem;
+    height: 1.2rem;
+}
+.progress-normal::-webkit-progress-value {
+    border-radius: 1rem;
+    background: limegreen;
+}
+.progress-warning::-webkit-progress-value {
+    border-radius: 1rem;
+    background: darkorange;
+}
+.progress-fault::-webkit-progress-value {
+    border-radius: 1rem;
+    background: red;
+}
+
+.normal{color: limegreen;}
 .normal-info{background-color: #2CB86D;}
-.warning{border: 10px solid #F49D34;}
+.warning{color: darkorange;}
 .warning-info{background-color: #F49D34;}
-.fault{border: 10px solid red;}
+.fault{color: red;}
 .fault-info{background-color: red;}
-.null{background-color: lightgray;/*border: 10px solid lightgray;*/}
+.null-info{background-color: lightgray;/*border: 10px solid lightgray;*/}
 
 body{-ms-overflow-style: none; scrollbar-width: none;}
 body::-webkit-scrollbar{display: none;}
