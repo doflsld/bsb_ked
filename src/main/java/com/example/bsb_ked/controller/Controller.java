@@ -30,23 +30,8 @@ public class Controller {
     }
 
     @GetMapping("/ess")
-    public String ess(Model model){
-
-        EssDto th = essService.getTh();
-        model.addAttribute("th", th);
-        EssDto co2 = essService.getCo();
-        model.addAttribute("co2", co2);
-        EssDto co = essService.getCo2();
-        model.addAttribute("co", co);
-        EssDto h2 = essService.getH2();
-        model.addAttribute("h2", h2);
-        EssDto voc = essService.getVoc();
-        model.addAttribute("voc", voc);
-
-        EssBatDto batDto = essBatService.getBatData();
-        model.addAttribute("bat", batDto);
-
-        return "ess_page";
+    public String ess(){
+        return "redirect:/";
     }
 
     @GetMapping("/storage")
@@ -86,6 +71,21 @@ public class Controller {
 
     @GetMapping("/")
     public String main(Model model) {
+
+        EssDto th = essService.getTh();
+        model.addAttribute("th", th);
+        EssDto co2 = essService.getCo();
+        model.addAttribute("co2", co2);
+        EssDto co = essService.getCo2();
+        model.addAttribute("co", co);
+        EssDto h2 = essService.getH2();
+        model.addAttribute("h2", h2);
+        EssDto voc = essService.getVoc();
+        model.addAttribute("voc", voc);
+
+        EssBatDto batDto = essBatService.getBatData();
+        model.addAttribute("bat", batDto);
+
         return "ess_page";
     }
 

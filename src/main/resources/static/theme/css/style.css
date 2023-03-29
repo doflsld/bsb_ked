@@ -659,7 +659,7 @@
 .warning-info{background-color: #F49D34;}
 .fault{color: red;}
 .fault-info{background-color: red;}
-.null-info{background-color: lightgray;/*border: 10px solid lightgray;*/}
+.null-info{background-color: lightgray;}
 
 body{-ms-overflow-style: none; scrollbar-width: none;}
 body::-webkit-scrollbar{display: none;}
