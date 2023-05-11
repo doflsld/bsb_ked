@@ -1,6 +1,4 @@
     function pulse() {
-        $('#e_temp').load(location.href+' #e_temp');
-        $('#e_humi').load(location.href+' #e_humi');
         $('#e_co2').load(location.href+' #e_co2');
         $('#e_co').load(location.href+' #e_co');
         $('#e_h2').load(location.href+' #e_h2');
