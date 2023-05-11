@@ -290,13 +290,16 @@
 <script th:inline="javascript">
 
     function status() {
+        $('#t_temp').load(location.href+' #t_temp');
+        $('#t_humi').load(location.href+' #t_humi');
+        $('#t_co').load(location.href+' #t_co');
 
         $.ajax({
             url: "/data",  // 데이터를 가져올 URL
             success: function(data) {  // 요청이 성공한 경우 호출되는 함수
                 var temp = data.temp;  // 받아온 데이터 중 온도 값
                 var humi = data.humi;  // 받아온 데이터 중 습도 값
-                var co = data.co;  // 받아온 데이터 중 CO 값
+                var co = data.co / 20;  // 받아온 데이터 중 CO 값
 
                 // 이후에는 받아온 데이터를 가지고 자바스크립트 코드를 작성할 수 있습니다.
                 // 예를 들어, 데이터를 이용해 화면에 출력하는 등의 작업을 할 수 있습니다.
