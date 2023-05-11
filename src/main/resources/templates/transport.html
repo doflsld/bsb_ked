@@ -82,15 +82,15 @@
                         <tbody>
                         <tr>
                             <th>온도</th>
-                            <td><p id="t_temp">[[${tests.temp}]] ℃</p></td>
+                            <td><span id="t_temp">[[${tests.temp}]]</span><span>℃</span></td>
                         </tr>
                         <tr>
                             <th>습도</th>
-                            <td><p id="t_humi">[[${tests.humi}]] ％</p></td>
+                            <td><span id="t_humi">[[${tests.humi}]]</span><span>％</span></td>
                         </tr>
                         <tr>
                             <th>CO</th>
-                            <td><p id="t_co">[[${#numbers.formatDecimal(tests.co/20, 1, 2)}]]</p></td>
+                            <td><span id="t_co">[[${#numbers.formatDecimal(tests.co/20, 1, 2)}]]</span><span>ppm</span></td>
                         </tr>
                         <!--                        <tr>
                                                     <th>H2</th>
@@ -140,9 +140,9 @@
                                     </tr>
                                     <tr>
                                         <th>일산화탄소</th>
-                                        <td>50ppm 미만</td>
-                                        <td>100ppm ~ 200ppm</td>
-                                        <td>200ppm 초과</td>
+                                        <td>10ppm 미만</td>
+                                        <td>10ppm ~ 25ppm</td>
+                                        <td>25ppm 초과</td>
                                     </tr>
                                     <!--                                    <tr>
                                                                             <th>수소</th>
@@ -155,14 +155,16 @@
                             </div>
                         </i>
                     </div>
-                    <div class="status-div-info">
-                        <div id="normal" class="status-info null-info fw-bolder">안전</div>
-                    </div>
-                    <div class="status-div-info">
-                        <div id="warning" class="status-info null-info fw-bolder">주의</div>
-                    </div>
-                    <div class="status-div-info">
-                        <div id="fault" class="status-info null-info fw-bolder">위험</div>
+                    <div id="status-box">
+                        <div class="status-div-info">
+                            <div id="normal" class="status-info null-info fw-bolder">안전</div>
+                        </div>
+                        <div class="status-div-info">
+                            <div id="warning" class="status-info null-info fw-bolder">주의</div>
+                        </div>
+                        <div class="status-div-info">
+                            <div id="fault" class="status-info null-info fw-bolder">위험</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -286,23 +288,44 @@
 <!-- Data -->
 <script src="../js/sens_data.js"></script>
 <script th:inline="javascript">
-    var temp = [[${tests.temp}]]
-    var humi = [[${tests.humi}]]
-    var co = [[${tests.co%20}]]
 
-    if(temp <= 31 && humi < 60 && co < 10){
-        $(document).ready(function(){
-            document.getElementById('normal').className = 'status-info normal-info fw-bolder';
+    function status() {
+
+        $.ajax({
+            url: "/data",  // 데이터를 가져올 URL
+            success: function(data) {  // 요청이 성공한 경우 호출되는 함수
+                var temp = data.temp;  // 받아온 데이터 중 온도 값
+                var humi = data.humi;  // 받아온 데이터 중 습도 값
+                var co = data.co;  // 받아온 데이터 중 CO 값
+
+                // 이후에는 받아온 데이터를 가지고 자바스크립트 코드를 작성할 수 있습니다.
+                // 예를 들어, 데이터를 이용해 화면에 출력하는 등의 작업을 할 수 있습니다.
+
+                if (temp <= 31 && humi < 60 && co < 10) {
+                    document.getElementById('normal').className = 'status-info normal-info fw-bolder';
+                    document.getElementById('warning').className = 'status-info null-info fw-bolder';
+                    document.getElementById('fault').className = 'status-info null-info fw-bolder';
+                } else if (temp > 36 || humi > 70 || co > 25) {
+                    document.getElementById('normal').className = 'status-info null-info fw-bolder';
+                    document.getElementById('warning').className = 'status-info null-info fw-bolder';
+                    document.getElementById('fault').className = 'status-info fault-info fw-bolder';
+                } else {
+                    document.getElementById('normal').className = 'status-info null-info fw-bolder';
+                    document.getElementById('warning').className = 'status-info warning-info fw-bolder';
+                    document.getElementById('fault').className = 'status-info null-info fw-bolder';
+                }
+            },
+            error: function() {  // 요청이 실패한 경우 호출되는 함수
+                console.log("데이터를 가져오는 데 실패했습니다.");
+            }
         });
-    }else if(temp > 36 || humi > 70 || co > 25){
-        $(document).ready(function(){
-            document.getElementById('fault').className = 'status-info fault-info fw-bolder';
-        });
-    }else{
-        $(document).ready(function(){
-            document.getElementById('warning').className = 'status-info warning-info fw-bolder';
-        });
+
     }
+
+    $(document).ready(function() {
+        status();
+        setInterval(status, 5000);
+    });
 </script>
 </body>
 
