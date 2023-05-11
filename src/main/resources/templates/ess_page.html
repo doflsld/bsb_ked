@@ -67,13 +67,13 @@
                                             <div class="row text-center">
                                                 <i id="temp" class="bi bi-thermometer-half fs-3 normal"></i>
                                             </div>
-                                            <div class="row justify-content-center">[[${th.data1}]] ℃</div>
+                                            <div class="row justify-content-center" id="e_temp">[[${th.data1}]] ℃</div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="row text-center">
                                                 <i id="humi" class="bi bi-droplet-half fs-3 normal"></i>
                                             </div>
-                                            <div class="row justify-content-center">[[${th.data2}]] %</div>
+                                            <div class="row justify-content-center" id="e_humi">[[${th.data2}]] %</div>
                                         </div>
                                         <div>
                                             <table class="table text-center mt-3 align-middle">
@@ -125,22 +125,22 @@
                                         <tbody>
                                         <tr>
                                             <th scope="row">CO2</th>
-                                            <td>[[${co2.data1}]]</td>
+                                            <td><p class="m-0" id="e_co2">[[${co2.data1}]]</p></td>
                                             <td>ppm</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">CO</th>
-                                            <td>[[${co.data1}]]</td>
+                                            <td><p class="m-0" id="e_co">[[${co.data1}]]</p></td>
                                             <td>ppm</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">H2</th>
-                                            <td>[[${h2.data1}]]</td>
+                                            <td><p class="m-0" id="e_h2">[[${h2.data1}]]</p></td>
                                             <td>ppm</td>
                                         </tr>
                                         <tr>
                                             <th scope="row">VOC</th>
-                                            <td>[[${voc.data1}]]</td>
+                                            <td><p class="m-0" id="e_voc">[[${voc.data1}]]</p></td>
                                             <td>ppm</td>
                                         </tr>
                                         </tbody>
@@ -158,21 +158,21 @@
                                             <tr>
                                                 <th scope="row"><img style="width: 40px" src="../asset/images/s-images/volt_icon.png"></th>
                                                 <td>전압</td>
-                                                <td>[[${bat.voltage}]]</td>
+                                                <td><p class="m-0" id="e_voltage">[[${bat.voltage}]]</p></td>
                                                 <td>V</td>
                                                 <th scope="row"><img style="width: 40px;" src="../asset/images/s-images/ampere_icon.png"></th>
                                                 <td>전류</td>
-                                                <td>[[${bat.current}]]</td>
+                                                <td><p class="m-0" id="e_current">[[${bat.current}]]</p></td>
                                                 <td>A</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row"><img style="width: 40px;" src="../asset/images/s-images/charge_icon.png"></th>
                                                 <td>충전량</td>
-                                                <td>[[${bat.charge}]]</td>
+                                                <td><p class="m-0" id="e_charge">[[${bat.charge}]]</p></td>
                                                 <td>kWh</td>
                                                 <th scope="row"><img style="width: 40px;" src="../asset/images/s-images/discharge_icon.png"></th>
                                                 <td>방전량</td>
-                                                <td>[[${bat.discharge}]]</td>
+                                                <td><p class="m-0" id="e_discharge">[[${bat.discharge}]]</p></td>
                                                 <td>kWh</td>
                                             </tr>
                                             </tbody>
@@ -226,6 +226,7 @@
 <!-- Clock -->
 <script src="../js/clock.js"></script>
 <script src="../js/scripts.js"></script>
+<script src="../js/sens_data.js"></script>
 <script th:inline="javascript">
     let temp = [[${th.data1}]];
     let humi = [[${th.data2}]];
