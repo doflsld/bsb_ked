@@ -65,13 +65,13 @@
                                     <div class="row justify-content-center">
                                         <div class="col-md-3">
                                             <div class="row text-center">
-                                                <i id="temp" class="bi bi-thermometer-half fs-3 normal"></i>
+                                                <i id="i_temp" class="bi bi-thermometer-half fs-3 normal"></i>
                                             </div>
                                             <div class="row justify-content-center" id="e_temp">[[${th.data1}]] ℃</div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="row text-center">
-                                                <i id="humi" class="bi bi-droplet-half fs-3 normal"></i>
+                                                <i id="i_humi" class="bi bi-droplet-half fs-3 normal"></i>
                                             </div>
                                             <div class="row justify-content-center" id="e_humi">[[${th.data2}]] %</div>
                                         </div>
@@ -234,19 +234,19 @@
     function statusth(){
 
         if(temp >= 36){
-            document.getElementById('temp').className = 'bi bi-thermometer-half fs-3 fault';
+            document.getElementById('i_temp').className = 'bi bi-thermometer-half fs-3 fault';
         }else if(temp < 31){
-            document.getElementById('temp').className = 'bi bi-thermometer-half fs-3 normal';
+            document.getElementById('i_temp').className = 'bi bi-thermometer-half fs-3 normal';
         }else{
-            document.getElementById('temp').className = 'bi bi-thermometer-half fs-3 warning';
+            document.getElementById('i_temp').className = 'bi bi-thermometer-half fs-3 warning';
         }
 
         if(humi >= 70){
-            document.getElementById('humi').className = 'bi bi-droplet-half fs-3 fault';
+            document.getElementById('i_humi').className = 'bi bi-droplet-half fs-3 fault';
         }else if(humi < 60){
-            document.getElementById('humi').className = 'bi bi-droplet-half fs-3 normal';
+            document.getElementById('i_humi').className = 'bi bi-droplet-half fs-3 normal';
         }else{
-            document.getElementById('humi').className = 'bi bi-droplet-half fs-3 warning';
+            document.getElementById('i_humi').className = 'bi bi-droplet-half fs-3 warning';
         }
 
     }
