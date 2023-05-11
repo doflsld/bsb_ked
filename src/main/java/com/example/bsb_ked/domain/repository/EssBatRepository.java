@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface EssBatRepository extends JpaRepository<EssBat, Long>, JpaSpecificationExecutor<EssBat>{
 
-    List<EssBat> findAllByOrderById();
+    List<EssBat> findAllByOrderByIdDesc();
 
 }

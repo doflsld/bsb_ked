@@ -21,7 +21,7 @@ public class EssBatService {
     @Transactional
     public EssBatDto getBatData(){
 
-        EssBat essBat = essBatRepository.findAllByOrderById().get(0);
+        EssBat essBat = essBatRepository.findAllByOrderByIdDesc().get(0);
 
         EssBatDto essBatDto = EssBatDto.builder()
                 .id(essBat.getId())
