@@ -128,20 +128,20 @@
                                     <tbody>
                                     <tr>
                                         <th >온도</th>
-                                        <td>31℃ 이하</td>
-                                        <td>31℃ ~ 36℃</td>
+                                        <td>31℃ 미만</td>
+                                        <td>31℃초과 36℃이하</td>
                                         <td>36℃ 초과</td>
                                     </tr>
                                     <tr>
                                         <th>습도</th>
                                         <td>60% 미만</td>
-                                        <td>60% ~ 70%</td>
+                                        <td>60%이상 70%이하</td>
                                         <td>70% 초과</td>
                                     </tr>
                                     <tr>
                                         <th>일산화탄소</th>
                                         <td>10ppm 미만</td>
-                                        <td>10ppm ~ 25ppm</td>
+                                        <td>10ppm이상 25ppm이하</td>
                                         <td>25ppm 초과</td>
                                     </tr>
                                     <!--                                    <tr>
@@ -304,7 +304,7 @@
                 // 이후에는 받아온 데이터를 가지고 자바스크립트 코드를 작성할 수 있습니다.
                 // 예를 들어, 데이터를 이용해 화면에 출력하는 등의 작업을 할 수 있습니다.
 
-                if (temp <= 31 && humi < 60 && co < 10) {
+                if (temp < 31 && humi < 60 && co < 10) {
                     document.getElementById('normal').className = 'status-info normal-info fw-bolder';
                     document.getElementById('warning').className = 'status-info null-info fw-bolder';
                     document.getElementById('fault').className = 'status-info null-info fw-bolder';
