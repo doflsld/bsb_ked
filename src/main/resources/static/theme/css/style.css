@@ -412,7 +412,7 @@
         text-align: center;
         background-color: #FFFFFF;
         padding: 20px;
-        width: 400px;
+        width: 450px;
         position: absolute;
         border: darkgray 1px solid;
         border-radius: 3px;
@@ -619,7 +619,7 @@
         animation: fadeIn 0.3s ease-in-out;
     }
     .safety-line div{
-        height: 14.5rem;
+        height: 15rem;
     }
 
     .safety-line div table{
