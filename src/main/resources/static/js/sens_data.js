@@ -1,3 +1,5 @@
+/* ess 페이지 */
+
     function pulse() {
         $('#e_co2').load(location.href+' #e_co2');
         $('#e_co').load(location.href+' #e_co');

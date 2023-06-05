@@ -288,7 +288,6 @@
                                 </div>
                             </div>
 
-
                             <!-- Basic Card Example -->
                             <div class="card shadow mb-4">
                                 <h6 class="m-3 font-weight-bold text-black-50">오프가스</h6>
@@ -374,11 +373,11 @@
 <script src="../theme/lib/tempusdominus/js/moment.min.js"></script>
 <script src="../theme/lib/tempusdominus/js/moment-timezone.min.js"></script>
 <script src="../theme/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- Include -->
+
+<!-- Include(sidebar, navbar include) -->
 <script src="../js/include.js"></script>
-<!-- Clock -->
-<script src="../js/clock.js"></script>
-<script src="../js/sens_data.js"></script>
+
+<!-- 화재 감지/미감지 변경 스크립트 -->
 <script th:inline="javascript">
 
     let val = [[${event.event}]];
@@ -391,6 +390,8 @@
     }
     $(document).ready(change_fire());
 </script>
+
+<!-- 온습도 데이터 색상 변경 스크립트 -->
 <script th:inline="javascript">
     let temp1 = [[${th1.data1}]];
     let humi1 = [[${th1.data2}]];

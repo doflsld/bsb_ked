@@ -92,11 +92,6 @@
                             <th>CO</th>
                             <td><span id="t_co">[[${#numbers.formatDecimal(tests.co/20, 1, 2)}]]</span><span>ppm</span></td>
                         </tr>
-                        <!--                        <tr>
-                                                    <th>H2</th>
-                                                    <td><p id="h2" th:text="${tests.h2}"></td>
-                                                    <td><p id="h2">[[${tests.h2}]]</p></td>
-                                                </tr>-->
                         </tbody>
                     </table>
                 </div>
@@ -187,12 +182,11 @@
 <script src="../theme/lib/tempusdominus/js/moment.min.js"></script>
 <script src="../theme/lib/tempusdominus/js/moment-timezone.min.js"></script>
 <script src="../theme/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- Include -->
+
+<!-- Include(sidebar, navbar include) -->
 <script src="../js/include.js"></script>
-<!-- Clock -->
-<script src="../js/clock.js"></script>
+
 <!-- Map -->
-<!--<script src="../js/map_info.js"></script>-->
 <script th:inline="javascript">
 
     var lat = [[${testm.lat}]]; lng = [[${testm.lng}]];
@@ -255,8 +249,8 @@
     });
 
 </script>
-<!-- Weather -->
-<!--<script src="../js/weather.js"></script>-->
+
+<!-- 날씨 api  -->
 <script th:inline="javascript">
 
     var $lat = [[${testm.lat}]]; $lng = [[${testm.lng}]];
@@ -285,8 +279,8 @@
     }
     $(document).ready(weather());
 </script>
-<!-- Data -->
-<script src="../js/sens_data.js"></script>
+
+<!-- 배터리 안전상태 색상 변경, 데이터 5초마다 갱신 -->
 <script th:inline="javascript">
 
     function status() {
@@ -330,6 +324,7 @@
         setInterval(status, 5000);
     });
 </script>
+
 </body>
 
 </html>
